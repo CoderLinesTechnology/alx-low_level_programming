@@ -8,7 +8,6 @@
 int main(void)
 {
 	int i;
-	int y;
 
 	for (i = 48; i <= 57; i++)
 	{
@@ -18,6 +17,6 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-	{
+	}
 	return (0);
 }
