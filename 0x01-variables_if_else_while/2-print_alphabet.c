@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
-*
 *main - Print lower case letters
 *
 *Return: 0 (Success)
