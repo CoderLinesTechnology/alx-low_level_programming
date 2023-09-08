@@ -30,7 +30,7 @@ int main(void)
 	{
 		printf("less than 5\n");
 	}
-	else if (n == 0)
+	else if (ldig == 0)
 	{
 		printf("0\n");
 	}
