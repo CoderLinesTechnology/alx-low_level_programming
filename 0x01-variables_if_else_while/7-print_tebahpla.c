@@ -2,7 +2,7 @@
 
 /**
 *main - Print lower case letters
-*
+*in reverse
 *Return: 0 (Success)
 *
 */
@@ -11,7 +11,7 @@ int main(void)
 	int letter;
 
 	letter = 122;
-	while (letter <= 97)
+	while (letter >= 97)
 	{
 		putchar(letter);
 		letter--;
