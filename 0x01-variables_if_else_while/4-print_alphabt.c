@@ -17,7 +17,7 @@ int main(void)
 		{
 			letter++;
 			continue;
-		}	
+		}
 		putchar(letter);
 		letter++;
 	}
