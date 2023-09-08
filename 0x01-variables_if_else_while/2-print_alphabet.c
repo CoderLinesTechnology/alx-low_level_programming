@@ -10,7 +10,7 @@
 int main(void)
 {
 	int letter;
-	
+
 	letter = 97;
 	while (letter <= 122)
 	{
