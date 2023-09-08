@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	char hex;
 
-	i = 1;
+	i = 0;
 	while (i <= 15)
 	{
 	if (i >= 1 && i <= 9)
