@@ -14,7 +14,7 @@ int main(void)
 	i = 0;
 	while (i <= 15)
 	{
-	if (i >= 1 && i <= 9)
+	if (i >= 0 && i <= 9)
 		hex = i + '0';
 	else
 	hex = i - 10 + 'a';
