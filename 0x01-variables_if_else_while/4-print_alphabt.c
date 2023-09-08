@@ -14,7 +14,10 @@ int main(void)
 	while (letter <= 122)
 	{
 		if (letter == 101 || letter == 113)
+		{
+			letter++;
 			continue;
+		}	
 		putchar(letter);
 		letter++;
 	}
