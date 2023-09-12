@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+*print_last_digit - Print the last digit
+*@n: Only parameter
+*
+*Return: the last number
+*/
+
+int print_last_digit(int n)
+{
+	if (n > 9)
+		n %= 10;
+	return (n);
+}
