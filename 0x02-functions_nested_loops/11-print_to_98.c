@@ -23,9 +23,12 @@ void print_to_98(int n)
 		}
 		else
 		{
-			if (b != 0)
-				_putchar(' ');
 			_putchar('0' + n);
+		}
+		if (n < 97)
+		{
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
 }
