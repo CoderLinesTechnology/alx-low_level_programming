@@ -21,7 +21,8 @@ void times_table(void)
 			}
 			else
 			{
-			_putchar(' ');
+			if (a != 0)
+				_putchar(' ');
 			_putchar('0' + ans);
 			}
 			if (b < 9)
@@ -32,5 +33,4 @@ void times_table(void)
 		}
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
