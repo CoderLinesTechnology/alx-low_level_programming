@@ -1,11 +1,21 @@
 #include "main.h"
 /**
-*main - printing list of alphabet using _putchar
+*print_alphabet_x10 - printing list of alphabet X10 using _putchar
 *
-*Return: 0 (Success)
 */
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	return (0);
+	int i, letter;
+
+	i = 0;
+	while (i < 10)
+	{
+		letter = 97;
+		while (letter <= 122)
+		{
+			_putchar(letter++);
+		}
+		_putchar('\n');
+		i++;
+	}
 }
