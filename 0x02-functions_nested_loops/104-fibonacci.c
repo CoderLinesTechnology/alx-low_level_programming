@@ -1,39 +1,24 @@
 #include <stdio.h>
 
 /**
- * print_large_number - Prints a large number that may exceed 1 billion.
- * @high: The high part of the number (divided by 1 billion).
- * @low: The low part of the number (modulo 1 billion).
- */
-void print_large_number(unsigned long high, unsigned long low)
-{
-	if (high > 0)
-		printf("%lu%lu", high, low);
-	else
-		printf("%lu", low);
-}
-
-/**
- * main - printing first 98 fibonacci sequence
- * Return: 0
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	unsigned long int current = 1;
-	unsigned long int next = 2;
-	int i;
+    unsigned long a = 1, b = 2, next;
+    int count;
 
-	printf("%lu, ", current);
+    printf("%lu, %lu, ", a, b);
 
-	for (i = 2; i < 98; i++)
-	{
-		print_large_number(0, next);
-		if (i < 97)
-			printf(", ");
-		next += current;
-		current = next - current;
-	}
-	printf("\n");
+    for (count = 3; count <= 98; ++count)
+    {
+        next = a + b;
+        printf("%lu%s", next, (count == 98) ? "\n" : ", ");
+        a = b;
+        b = next;
+    }
 
-	return (0);
+    return (0);
 }
