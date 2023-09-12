@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
-* print_large_numb - Prints a large number
-* @high: The high part of the number (divided by 1 billion).
-* @low: The low part of the number (modulo 1 billion).
-*/
-void print_large_num(unsigned long high, unsigned long low)
+ * print_large_number - Prints a large number that may exceed 1 billion.
+ * @high: The high part of the number (divided by 1 billion).
+ * @low: The low part of the number (modulo 1 billion).
+ */
+void print_large_number(unsigned long high, unsigned long low)
 {
 	if (high > 0)
 		printf("%lu%lu", high, low);
@@ -27,7 +27,7 @@ int main(void)
 
 	for (i = 2; i < 98; i++)
 	{
-		print_large_num(0, next);
+		print_large_number(0, next);
 		if (i < 97)
 			printf(", ");
 		next += current;
