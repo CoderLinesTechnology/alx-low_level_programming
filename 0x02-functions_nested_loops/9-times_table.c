@@ -17,9 +17,12 @@ void times_table(void)
 			if (ans % 57 > 0)
 			{
 				ext = ans % 57;
-				_putchar('ext');
+				_putchar(ext);
 			}
+			else
+			{
 			_putchar(ans);
+			}
 			if (b < 48 + 9)
 			{
 				_putchar(',');
