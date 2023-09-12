@@ -1,4 +1,17 @@
 #include <stdio.h>
+int sum_3_5_multiples(int);
+
+/**
+ * main - driver code
+ * Return: 0
+ */
+int main(void)
+{
+	printf("%u\n", sum_3_5_multiples(1024));
+
+	return (0);
+}
+
 
 /**
  * sum_3_5_multiples - compute the sum of all the multiples 3 or 5
