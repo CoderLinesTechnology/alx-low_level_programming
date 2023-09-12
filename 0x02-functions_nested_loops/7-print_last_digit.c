@@ -9,7 +9,15 @@
 
 int print_last_digit(int n)
 {
-	if (n > 9)
+	if (n > 0)
+	{
+		if (n > 9)
+			n %= 10;
+	}
+	else
+	{
+		n *= -1;
 		n %= 10;
-	return (n);
+	}
+	return (n * 11);
 }
