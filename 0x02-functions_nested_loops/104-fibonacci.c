@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* print_large_number - Prints a large number that 
+* print_large_numb - Prints a large number
 * @high: The high part of the number (divided by 1 billion).
 * @low: The low part of the number (modulo 1 billion).
 */
