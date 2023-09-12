@@ -1,12 +1,15 @@
 #include "main.h"
 /**
-*main - printing list of alphabet using _putchar
+*print_alphabet - printing list of alphabet using _putchar
 *
 *Return: 0 (Success)
 */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	_putchar('\n');
-	return (0);
+	int i = 97;
+
+	while (i <= 122)
+	{
+		_putchar(i++);
+	}
 }
