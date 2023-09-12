@@ -5,20 +5,27 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-    unsigned long a = 1, b = 2, next;
+
+
+int main(void) {
+    unsigned long long a = 1, b = 2, next;
     int count;
 
-    printf("%lu, %lu, ", a, b);
+    printf("1, 2, ");
 
-    for (count = 3; count <= 98; ++count)
-    {
+    for (count = 3; count <= 98; ++count) {
         next = a + b;
-        printf("%lu%s", next, (count == 98) ? "\n" : ", ");
+        printf("%llu", next);
+
+        if (count < 98)
+            printf(", ");
+
         a = b;
         b = next;
     }
 
-    return (0);
+    printf("\n");
+
+    return 0;
 }
+
