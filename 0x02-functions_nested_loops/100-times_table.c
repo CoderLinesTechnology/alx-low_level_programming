@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*
+*print_times_tables - Times
 *
 */
 
@@ -16,7 +16,7 @@ int i, j, p;
 	{
 		for (j = 0; j <= n; j++)
 		{
-			p = i * j; /* get product */			
+			p = i * j;
 			if (p > 99)
 			{
 				_putchar((p / 100) + '0');
