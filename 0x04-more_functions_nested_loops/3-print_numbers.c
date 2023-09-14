@@ -3,7 +3,7 @@
 /**
 *print_numbers - print numbers
 *
-*Return: the result
+*
 */
 
 void print_numbers(void)
@@ -13,6 +13,7 @@ void print_numbers(void)
 	while (c <= 57)
 	{
 		_putchar(c);
+		c++;
 	}
 	_putchar('\n');
 }
