@@ -18,7 +18,7 @@ int main(void)
 			printf("%s", "Buzz");
 		if (!(x % 3 == 0 || x % 5 == 0))
 			printf("%d", x);
-		if (x < 99)
+		if (x < 100)
 			putchar(' ');
 	}
 	putchar('\n');
