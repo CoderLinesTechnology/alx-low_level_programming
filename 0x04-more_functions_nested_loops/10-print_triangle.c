@@ -10,11 +10,11 @@ void print_triangle(int size)
 {
 	int x, y, z;
 
-	for (x = 0; x < size; x++)
+	for (x = 1; x <= size; x++)
 	{
 		for (z = size - x; z != 0; z--)
 			_putchar(' ');
-		for (y = 0; y < size; y++)
+		for (y = 1; y <= x; y++)
 			_putchar('#');
 		_putchar('\n');
 	}
