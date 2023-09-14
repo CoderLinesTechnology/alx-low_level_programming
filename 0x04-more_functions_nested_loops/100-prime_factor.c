@@ -1,22 +1,30 @@
 #include <stdio.h>
 
-int main() {
-  long num = 612852475143;
-  int i;
-  long l_prime_fac = -1;
+/**
+*main - entry point
+*
+*Return: 0 (Success)
+*/
 
-  for (i = 2; i * i <= num; i++) {
-    while (num % i == 0) {
-      l_prime_fac = i;
-      num /= i;
-    }
-  }
+int main(void)
+{
+	long num = 612852475143;
+	int i;
+	long l_prime_fac = -1;
 
-  if (num > 1) {
-    l_prime_fac = num;
-  }
+	for (i = 2; i * i <= num; i++)
+	{
+		while (num % i == 0)
+		{
+			l_prime_fac = i;
+			num /= i;
+		}
+	}
 
-  printf("%ld\n", l_prime_fac);
+	if (num > 1)
+		l_prime_fac = num;
 
-  return 0;
+	printf("%ld\n", l_prime_fac);
+
+	return (0);
 }
