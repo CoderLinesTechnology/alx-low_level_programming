@@ -2,7 +2,7 @@
 
 /**
  *swap_int - reassign to 98
- *@a: first number
+ *@a: first number param
  *@b: second number
  */
 
