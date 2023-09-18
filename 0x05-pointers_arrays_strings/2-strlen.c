@@ -3,7 +3,7 @@
 /**
 *_strlen - String Length
 *@s: first number param
-*return: the length
+*Return: the length
 */
 
 int _strlen(char *s)
