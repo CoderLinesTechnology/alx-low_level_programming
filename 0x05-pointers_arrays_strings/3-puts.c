@@ -3,7 +3,7 @@
 
 /**
 *_puts - Print string
-*@s: first number param
+*@str: first number param
 *
 */
 
