@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- *_strlen - String Length
- *@s: first number param
- */
+*_strlen - String Length
+*@s: first number param
+*return: the length
+*/
 
 int _strlen(char *s)
 {
