@@ -11,13 +11,17 @@ char *leet(char *s)
 {
 	char c[5][3] =  {{'a', 'A', '4'}, {'e', 'E', '3'},
 	{'o', 'O', '0'}, {'t', 'T', '7'}, {'l', 'L', '1'}};
-	int i;
+	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == c[i][0] || s[i] == c[i][1])
+		for (j = 0; j < 5; j++)
 		{
-			s[i] = c[i][2];
+			if (s[i] == c[j][0] || s[i] == c[j][1])
+			{
+				s[i] = c[j][2];
+				break;
+			}
 		}
 	}
 	return (s);
