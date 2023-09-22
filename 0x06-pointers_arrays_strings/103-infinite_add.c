@@ -12,14 +12,14 @@
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	if (strlen(n1) + strlen(n2) >= size_r)
-	{
-		return (0);
-	}
-
 	int carry = 0;
 	int digit = 0;
 	int i, j, k;
+
+	if ((strlen(n1) + strlen(n2)) >= (size_t)size_r)
+	{
+		return (0);
+	}
 
 	for (i = strlen(n1) - 1, j = strlen(n2) - 1, k = size_r - 1;
 	i >= 0 || j >= 0; i--, j--, k--)
