@@ -19,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	int carry = 0;
 	int digit = 0;
-	int i, j;
+	int i, j, k;
 
 	for (i = strlen(n1) - 1, j = strlen(n2) - 1, k = size_r - 1;
 	i >= 0 || j >= 0; i--, j--, k--)
