@@ -1,4 +1,4 @@
-#include "main.j"
+#include "main.h"
 
 /**
 *reverse_array - Function to reverse the element of an array
