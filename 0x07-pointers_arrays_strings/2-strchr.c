@@ -9,7 +9,6 @@
 
 char *_strchr(char *s, char c)
 {
-	char *sub;
 	int x = 0;
 
 	if (s == NULL)
@@ -19,7 +18,7 @@ char *_strchr(char *s, char c)
 	for (; *s != '\0'; s++, x++)
 	{
 		if (*(s + x) == c)
-			return (s);
+			return (s + x);
 	}
 	return (NULL);
 }
