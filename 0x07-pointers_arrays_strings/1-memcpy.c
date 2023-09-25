@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _memcpy - Copy the number of bytes
  *@dest: destination parameter
