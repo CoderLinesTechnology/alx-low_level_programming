@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memcpy - Copy the number of bytes
+ * _strchr - Substring
  *@s: string parameter
  *@c: character search parameter
  *
@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 	if (s == NULL)
 		return (NULL);
 	if (c == '\0')
-		return (s)
+		return (s);
 	for (; *s != '\0'; s++, x++)
 	{
 		if (*(s + x) == c)
