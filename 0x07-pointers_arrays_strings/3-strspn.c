@@ -17,10 +17,12 @@ unsigned int _strspn(char *s, char *accept)
 		if (s[i] == 32)
 			return (x);
 		else
-		for (j = 0; accept[j] >= '\0'; j++)
 		{
-			if (s[i] == accept[j])
-				x++;
+			for (j = 0; accept[j] > '\0'; j++)
+			{
+				if (s[i] == accept[j])
+					x++;
+			}
 		}
 	}
 	return (x);
