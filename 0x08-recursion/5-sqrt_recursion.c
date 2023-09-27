@@ -11,7 +11,7 @@
 int _sqrt(int n)
 {
 	int low, high, mid;
-	long long square;
+	long square;
 
 	if (n < 0)
 	return -1; /* Negative numbers don't have natural square roots */
@@ -22,7 +22,7 @@ int _sqrt(int n)
 	while (low <= high)
 	{
 	mid = low + (high - low) / 2;
-	square = (long long)mid * mid;
+	square = (long)mid * mid;
 
 		if (square == n)
 			return mid; /* Found the exact square root */
