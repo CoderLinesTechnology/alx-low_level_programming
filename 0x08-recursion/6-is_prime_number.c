@@ -1,39 +1,32 @@
+#include "main.h"
 /**
- * is_divisible - Helper function to
- * check if n is divisible by any integer from a to b.
- * @n: The integer to be checked for divisibility.
- * @a: The starting integer for the range.
- * @b: The ending integer for the range.
- *
- * Return: 1 if n is divisible by any integer in the range, 0 otherwise.
- */
-int is_divisible(int n, int a, int b)
+  * primeFinder - searches for if a number is prime
+  *
+  * @x: the number to check
+  * @y: the numbers we'll go through
+  *
+  * Return: whether or not the number is a prime number
+  */
+int primeFinder(int x, int y)
 {
-	if (a > b)
+	if (x <= 1 || x % y == 0)
 		return (0);
-
-	if (n % a == 0)
+	else if (x == y)
 		return (1);
+	else if (x > y)
+		primeFinder(x, y + 1);
 
-	return (is_divisible(n, a + 1, b));
+	return (1);
 }
 
 /**
- * is_prime_number - Checks if an integer is a prime number using recursion.
- * @n: The integer to be checked.
- *
- * Return: 1 if n is a prime number, 0 otherwise.
- */
+  * is_prime_number - tells us if an integer is a prime number or not
+  *
+  * @n: the number to check
+  *
+  * Return: 0 if the number is not prime and 1 if it is
+  */
 int is_prime_number(int n)
 {
-	if (n <= 1)
-		return (0);
-
-	if (n <= 3)
-		return (1);
-
-	if (is_divisible(n, 2, (int)sqrt(n)) == 1)
-		return (0);
-
-	return (1);
+	return (primeFinder(n, 2));
 }
