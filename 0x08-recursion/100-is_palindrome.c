@@ -1,7 +1,8 @@
 #include <string.h>
 #include "main.h"
 /**
- * is_palindrome_helper - Helper function to check if a substring is a palindrome.
+ * is_palindrome_helper - Helper function
+ * to check if a substring is a palindrome.
  * @s: The input string.
  * @start: The starting index of the substring.
  * @end: The ending index of the substring.
