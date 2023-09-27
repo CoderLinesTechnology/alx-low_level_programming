@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_puts_recursion
+ *_puts_recursion - Puts clone
  *@s: String param
  *
  */
@@ -13,6 +13,6 @@ void _puts_recursion(char *s)
 		_putchar('\n');
 		return;
 	}
-	_putchar(&s);
+	_putchar(*s);
 	_puts_recursion(++s);
 }
