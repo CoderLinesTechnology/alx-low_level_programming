@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 /**
  * is_palindrome_helper - Helper function to check if a substring is a palindrome.
