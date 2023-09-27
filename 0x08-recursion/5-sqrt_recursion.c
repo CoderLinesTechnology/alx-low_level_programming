@@ -11,11 +11,13 @@
  */
 int find_sqrt(int n, int low, int high)
 {
+	int mid, square;
+
 	if (low > high)
 		return (-1);
 
-	int mid = (low + high) / 2;
-	int square = mid * mid;
+	mid = (low + high) / 2;
+	square = mid * mid;
 
 	if (square == n)
 		return (mid);
