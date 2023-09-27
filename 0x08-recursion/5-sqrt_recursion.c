@@ -1,44 +1,41 @@
-#include "main.h"
+#include <stdio.h>
+
 /**
- * find_sqrt - Helper function to find the
+ * _sqrt - Helper function to find the
  * natural square root of a number using binary search
  * @n: The number for which to find the square root
- * @low: The lower bound of the search range
- * @high: The upper bound of the search range
  *
  * Return: The natural square root of the number,
  * or -1 if no natural square root exists
  */
-int find_sqrt(int n, int low, int high)
+int _sqrt(int n)
 {
-	int mid, square;
+	int low, high, mid;
+	long long square;
 
-	if (low > high)
-		return (-1);
+	if (n < 0)
+	return -1; /* Negative numbers don't have natural square roots */
 
-	mid = (low + high) / 2;
-	square = mid * mid;
+	low = 0;
+	high = n;
 
-	if (square == n)
-		return (mid);
-	else if (square < n)
-		return (find_sqrt(n, mid + 1, high));
-	else
-		return (find_sqrt(n, low, mid - 1));
+	while (low <= high)
+	{
+	mid = low + (high - low) / 2;
+	square = (long long)mid * mid;
+
+		if (square == n)
+			return mid; /* Found the exact square root */
+		else if (square < n)
+			low = mid + 1; /* Continue searching in the upper half */
+		else
+			high = mid - 1; /* Continue searching in the lower half */
+	}
+
+	return -1; /* No natural square root exists */
 }
 
-/**
- * _sqrt_recursion - Returns the natural square root of a number
- * @n: The number for which to find the square root
- *
- * Return: The natural square root of the number,
- * or -1 if no natural square root exists
- */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1); /* Negative numbers don't have natural square roots */
-
-	/* Call the helper function with appropriate initial values */
-	return (find_sqrt(n, 0, n));
+	return _sqrt(n);
 }
