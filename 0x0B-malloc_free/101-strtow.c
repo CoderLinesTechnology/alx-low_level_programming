@@ -1,59 +1,42 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * count_words - Counts the number of words in a string
- * @str: Input string
+ * strtow - Splits a string into words.
+ * @str: Input string.
  *
- * Return: Number of words in the string
- */
-int count_words(char *str)
-{
-	int count = 0;
-	int is_word = 0;
-
-	while (*str)
-	{
-		if (*str == ' ')
-			is_word = 0;
-		else if (is_word == 0)
-		{
-			is_word = 1;
-			count++;
-		}
-		str++;
-	}
-
-	return (count);
-}
-
-/**
- * strtow - Splits a string into words
- * @str: Input string
- *
- * Return: Pointer to an array of strings (words)
+ * Return: Pointer to an array of strings (words), NULL on failure.
  */
 char **strtow(char *str)
 {
 	char **words;
-	int i, j, len, word_count, word_start;
+	int i, j, k, len, word_count;
 
-	if (str == ' ' || *str == '\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	word_count = count_words(str);
+	word_count = 0;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+			word_count++;
+	}
+
+	if (word_count == 0)
+		return (NULL);
 
 	words = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
-	for (i = 0, word_start = 0; i < word_count; i++)
+	for (i = 0, k = 0; i < word_count; i++)
 	{
-		while (str[word_start] == ' ')
-			word_start++;
+		while (str[k] == ' ')
+			k++;
 
 		len = 0;
-		while (str[word_start + len] != ' ' && str[word_start + len] != '\0')
+		while (str[k + len] != ' ' && str[k + len] != '\0')
 			len++;
 
 		words[i] = (char *)malloc((len + 1) * sizeof(char));
@@ -66,10 +49,10 @@ char **strtow(char *str)
 		}
 
 		for (j = 0; j < len; j++)
-			words[i][j] = str[word_start + j];
+			words[i][j] = str[k + j];
 		words[i][j] = '\0';
 
-		word_start += len;
+		k += len;
 	}
 
 	words[word_count] = NULL;
