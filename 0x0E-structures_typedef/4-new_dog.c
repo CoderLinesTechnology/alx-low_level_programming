@@ -7,6 +7,8 @@
 *owner: dog owner
 *Return: return new dog
 */
+int _strlen(char *str);
+char *_strcopy(char *dest, char *src);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
