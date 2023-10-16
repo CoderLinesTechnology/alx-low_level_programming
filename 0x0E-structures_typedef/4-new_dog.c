@@ -1,21 +1,21 @@
 #include "dog.h"
 
 /**
- * _strlen - returns the length of a string
- * @str: string to be counted
- * Return: length of the string
- */
+*_strlen - returns the length of a string
+*@str: string to be counted
+*Return: length of the string
+*/
 int _strlen(char *str)
 {
-    int length = 0;
+	int length = 0;
 
-    while (*str)
-    {
-        length++;
-        str++;
-    }
+	while (*str)
+	{
+		length++;
+		str++;
+	}
 
-    return (length);
+	return (length);
 }
 
 /**
@@ -26,16 +26,16 @@ int _strlen(char *str)
  */
 char *_strcopy(char *dest, char *src)
 {
-    int index = 0;
+	int index = 0;
 
-    while (src[index])
-    {
-        dest[index] = src[index];
-        index++;
-    }
+	while (src[index])
+	{
+		dest[index] = src[index];
+		index++;
+	}
 
-    dest[index] = '\0';
-    return (dest);
+	dest[index] = '\0';
+	return (dest);
 }
 
 /**
@@ -47,32 +47,32 @@ char *_strcopy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	 dog_t *newDog = malloc(sizeof(dog_t));
+	dog_t *newDog = malloc(sizeof(dog_t));
 
-    if (name == NULL || age < 0 || owner == NULL)
-        return (NULL);
+	if (name == NULL || age < 0 || owner == NULL)
+	return (NULL);
 
-    if (newDog == NULL)
-        return (NULL);
+	if (newDog == NULL)
+	return (NULL);
 
-    newDog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-    if (newDog->name == NULL)
-    {
-        free(newDog);
-        return (NULL);
-    }
+	newDog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (newDog->name == NULL)
+	{
+		free(newDog);
+		return (NULL);
+	}
 
-    newDog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-    if (newDog->owner == NULL)
-    {
-        free(newDog->name);
-        free(newDog);
-        return (NULL);
-    }
+	newDog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (newDog->owner == NULL)
+	{
+		free(newDog->name);
+		free(newDog);
+		return (NULL);
+	}
 
-    _strcopy(newDog->name, name);
-    newDog->age = age;
-    _strcopy(newDog->owner, owner);
+	_strcopy(newDog->name, name);
+	newDog->age = age;
+	_strcopy(newDog->owner, owner);
 
-    return (newDog);
+	return (newDog);
 }
