@@ -1,4 +1,4 @@
-#include <stddef.h>`
+#include <stddef.h>
 /**
 *array_iterator - Array Iterator
 *@array: array
