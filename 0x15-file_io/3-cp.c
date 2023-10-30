@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 65536
 
 /**
  * print_error_and_exit - Prints an error message and exits the program.
